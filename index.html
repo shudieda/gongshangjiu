@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 微软雅黑;
+        }
+
+        .body{
+            text-align:center;
+        }
+        .nav-bar-hidden{
+            position: fixed;
+            top: 0px;
+            left: 0;
+            z-index: 99;
+            width: 100%;
+
+            transition: margin-top .3s linear;
+        }
+
+
+
+        .sc{
+            opacity: 0;
+        }
+
+        .sc:hover{
+            opacity: 1;
+        }
+        .sj{
+            opacity: 0;
+        }
+
+        .sj:hover{
+            opacity: 1;
+        }
+
+
+    </style>
+</head>
+<body style="font-family: 微软雅黑; background-color: rgb(242,242,242);overflow-x: hidden;" oncontextmenu=self.event.returnValue=false>
+<div style="height: 142px;width: 1182px;margin: 0 auto;">
+    <div class="nav-bar-hidden">
+        <img src="drivers/gs24.png">
+    </div>
+    
+    
+    <div>
+        <img src="drivers/gs18.png" style="position: absolute;">
+        <input style="font-family: 微软雅黑;margin-left: 486px;margin-top: 29px;width: 40px;color: rgb(109,109,109); position: absolute;background-color: transparent;border: none;" value="北京">
+        <input style="font-family: 微软雅黑;margin-left: 558px;margin-top: 29px;width: 40px;color: rgb(109,109,109); position: absolute;background-color: transparent;border: none;" value="融e购">
+        <input style="font-family: 微软雅黑;margin-left: 634px;margin-top: 29px;width: 40px;color: rgb(109,109,109); position: absolute;background-color: transparent;border: none;" value="站内信">
+        <input style="font-family: 微软雅黑;margin-left: 715px;margin-top: 29px;width: 90px;color: rgb(109,109,109); position: absolute;background-color: transparent;border: none;" value="欢迎您，李四">
+        <input style="font-family: 微软雅黑;margin-left: 836px;margin-top: 29px;width: 40px;color: rgb(109,109,109); position: absolute;background-color: transparent;border: none;" value="退出">
+        <input style="font-family: 微软雅黑;margin-left: 894px;margin-top: 29px;width: 150px;color: rgb(109,109,109); position: absolute;background-color: transparent;border: none;" value="找功能，找产品，点我！">
+    </div>
+
+    <div>
+        <input style="font-family: 微软雅黑;font-size: 15px; margin-left: 144px;margin-top: 92px;width: 40px;color: rgb(255,255,255); position: absolute;background-color: transparent;border: none;" value="全部">
+        <input style="font-family: 微软雅黑;font-size: 15px; margin-left: 240px;margin-top: 92px;width: 40px;color: rgb(255,255,255); position: absolute;background-color: transparent;border: none;" value="首页">
+        <input style="font-family: 微软雅黑;font-size: 15px; margin-left: 349px;margin-top: 92px;width: 70px;color: rgb(255,255,255); position: absolute;background-color: transparent;border: none;" value="财富广场">
+        <input style="font-family: 微软雅黑;font-size: 15px; margin-left: 489px;margin-top: 92px;width: 70px;color: rgb(255,255,255); position: absolute;background-color: transparent;border: none;" value="惠生活">
+        <input style="font-family: 微软雅黑;font-size: 15px; margin-left: 611px;margin-top: 92px;width: 70px;color: rgb(255,255,255); position: absolute;background-color: transparent;border: none;" value="账户列表">
+        <input style="font-family: 微软雅黑;font-size: 15px; margin-left: 751px;margin-top: 92px;width: 40px;color: rgb(255,255,255); position: absolute;background-color: transparent;border: none;" value="安全">
+        <input style="font-family: 微软雅黑;font-size: 15px; margin-left: 855px;margin-top: 92px;width: 40px;color: rgb(255,255,255); position: absolute;background-color: transparent;border: none;" value="设置">
+    </div>
+
+    <div style="font-family: 微软雅黑;" >
+        <input style="font-size: 15px; margin-left: 108px;margin-top: 177px;width: 40px;color: rgb(255,0,0); position: absolute;background-color: transparent;border: none;" value="最爱">
+
+        <input style="margin-left: 175px;margin-top: 176px;width: 55px;color: rgb(109,109,109); position: absolute;background-color: transparent;border: none;" value="注册账户">
+        <input style="margin-left: 187px;margin-top: 192px;width: 35px;color: rgb(109,109,109); position: absolute;background-color: transparent;border: none;" value="转账">
+
+
+        <input style="margin-left: 254px;margin-top: 176px;width: 55px;color: rgb(109,109,109); position: absolute;background-color: transparent;border: none;" value="e缴费">
+        <input style="margin-left: 327px;margin-top: 176px;width: 55px;color: rgb(109,109,109); position: absolute;background-color: transparent;border: none;" value="贷款">
+        <input style="margin-left: 385px;margin-top: 176px;width: 55px;color: rgb(109,109,109); position: absolute;background-color: transparent;border: none;" value="转账汇款">
+        <input style="margin-left: 461px;margin-top: 176px;width: 55px;color: rgb(109,109,109); position: absolute;background-color: transparent;border: none;" value="贵金属">
+        <input style="margin-left: 525px;margin-top: 176px;width: 55px;color: rgb(109,109,109); position: absolute;background-color: transparent;border: none;" value="本地特色">
+        <input style="margin-left: 595px;margin-top: 176px;width: 55px;color: rgb(109,109,109); position: absolute;background-color: transparent;border: none;" value="我的账户">
+        <input style="margin-left: 674px;margin-top: 176px;width: 55px;color: rgb(109,109,109); position: absolute;background-color: transparent;border: none;" value="融e购">
+        <input style="margin-left: 732px;margin-top: 176px;width: 70px;color: rgb(109,109,109); position: absolute;background-color: transparent;border: none;" value="工银e支付">
+        <input style="margin-left: 811px;margin-top: 176px;width: 55px;color: rgb(109,109,109); position: absolute;background-color: transparent;border: none;" value="信用卡">
+        <input style="margin-left: 887px;margin-top: 176px;width: 55px;color: rgb(109,109,109); position: absolute;background-color: transparent;border: none;" value="调整">
+    </div>
+
+
+
+
+    <input style="font-size: 10px;margin-left: 114px;margin-top: 239px;width: 70px;color: rgb(0,0,0); position: absolute;background-color: transparent;border: none;" value="银行卡.账户">
+    <input style="font-size: 10px;margin-left: 193px;margin-top: 239px;width: 55px;color: rgb(0,0,0); position: absolute;background-color: transparent;border: none;" value="账户服务">
+    <input style="font-size: 10px;margin-left: 258px;margin-top: 239px;width: 55px;color: rgb(0,0,0); position: absolute;background-color: transparent;border: none;" value="境内汇款">
+
+
+
+    <input style="font-size: 10px;margin-left: 913px;margin-top: 239px;width: 65px;color: rgb(0,0,0); position: absolute;background-color: transparent;border: none;" value="最近使用：">
+    <input style="font-size: 10px; margin-left: 975px;margin-top: 239px;width: 55px;color: rgb(75,149,203); position: absolute;background-color: transparent;border: none;" value="明细查询">
+    <input style="font-size: 10px; margin-left: 1033px;margin-top: 239px;width: 55px;color: rgb(75,149,203); position: absolute;background-color: transparent;border: none;" value="我的网银">
+
+
+
+
+
+
+
+
+
+
+    <input style="margin-left: 299px;margin-top: 342px;width: 75px;color: rgb(0,0,0); position: absolute;background-color: transparent;border: none;" value="2020.03.23">
+    <input style="margin-left: 444px;margin-top: 342px;width: 75px;color: rgb(0,0,0); position: absolute;background-color: transparent;border: none;" value="2020.03.23">
+
+
+
+
+    <input style="margin-left: 297px;margin-top: 385px;width: 300px;color: rgb(0,0,0); position: absolute;background-color: transparent;border: none;" value="北京 6222022202068463279 e时代卡">
+
+
+
+    <input style="font-size: 13px; margin-left: 297px;margin-top: 430px;width: 300px;color: rgb(0,0,0); position: absolute;background-color: transparent;border: none;" value="00000 活期 基本户 2201027402023540068">
+
+
+    <input style="margin-left: 295px;margin-top: 472px;width: 200px;color: rgb(0,0,0); position: absolute;background-color: transparent;border: none;" value="全部">
+
+
+    <input style="margin-left: 433px;margin-top: 619px;width: 100px;color: rgb(0,0,0); position: absolute;background-color: transparent;border: none;" value="文本格式（.txt）">
+
+
+    <img src="drivers/gs19.png" style="position: absolute;margin-top: 646px;margin-left: 85px;">
+
+    <input style="margin-left: 134px;margin-top: 657px;width: 65px;color: rgb(136,136,137); position: absolute;background-color: transparent;border: none;" value="交易时间">
+    <input style="margin-left: 308px;margin-top: 657px;width: 65px;color: rgb(136,136,137); position: absolute;background-color: transparent;border: none;" value="摘要">
+    <input style="margin-left: 457px;margin-top: 657px;width: 150px;color: rgb(136,136,137); position: absolute;background-color: transparent;border: none;" value="金额">
+    <input style="margin-left: 565px;margin-top: 657px;width: 65px;color: rgb(136,136,137); position: absolute;background-color: transparent;border: none;" value="币种">
+    <input style="margin-left: 662px;margin-top: 657px;width: 65px;color: rgb(136,136,137); position: absolute;background-color: transparent;border: none;" value="余额">
+    <input style="margin-left: 828px;margin-top: 657px;width: 65px;color: rgb(136,136,137); position: absolute;background-color: transparent;border: none;" value="对方信息">
+
+    <div>
+        <img src="drivers/gs20.png" style="position: absolute;margin-top: 686px;margin-left: 85px;">
+        <input style="width: 130px; position: absolute;margin-left: 98px;margin-top: 697px; background-color: transparent;border: none;text-align: center;" value="2020-01-03">
+        <input style="position: absolute;margin-left: 249px;margin-top: 697px; background-color: transparent;border: none;text-align: center;" value="网转">
+        <input style="position: absolute;margin-left: 394px;margin-top: 697px; background-color: transparent;border: none;text-align: center;color: rgb(255,0,0);" value="+1.00">
+        <input style="position: absolute;margin-left: 533px;margin-top: 697px; background-color: transparent;border: none;text-align: center;width: 90px;" value="人民币">
+        <input style="position: absolute;margin-left: 603px;margin-top: 697px; background-color: transparent;border: none;text-align: center;" value="2.00">
+        <input style="position: absolute;margin-left: 782px;margin-top: 697px; background-color: transparent;border: none;text-align: center;" value="张三">
+
+    </div>
+    <button class="sj" style="position: fixed; left: 1110px;margin-top: 478px; margin-bottom:5px;padding:3px 3px 3px 3px;background-color:transparent;border-radius:10px;font-size: 10px;" type="button">添加收入</button>
+
+
+    <div class="box" style="box-sizing: border-box;">
+        <div>
+            <img src="drivers/gs20.png" style="margin-top: 726px;margin-left: 85px;">
+            <input style="position: absolute;margin-left: -1022px;margin-top: 738px; width: 200px; background-color: transparent;border: none;text-align: center;" value="2020-01-03">
+            <input style="position: absolute;margin-left: -836px;margin-top: 738px; background-color: transparent;border: none;text-align: center;" value="网转">
+            <input style="position: absolute;margin-left: -691px;margin-top: 738px; background-color: transparent;border: none;text-align: center;color: rgb(255,0,0);" value="+1.00">
+            <input style="position: absolute;margin-left: -581px;margin-top: 738px; background-color: transparent;border: none;text-align: center;" value="人民币">
+            <input style="position: absolute;margin-left: -482px;margin-top: 738px; background-color: transparent;border: none;text-align: center;" value="2.00">
+            <input style="position: absolute;margin-left: -303px;margin-top: 738px; background-color: transparent;border: none;text-align: center;" value="张三">
+        </div>
+    </div>
+    <img src="drivers/gs6.png" style="position: fixed;left: 1134px;top:651px;">
+
+
+    <div>
+        <img src="drivers/gs21.png" style="margin-left: 85px;margin-top: -4px;">
+        <input style="position: absolute;margin-top: px;margin-left: -337px;width:130px;background-color: transparent;border: none;" value="收入合计（人民币）：">
+        <input style="position: absolute;margin-top: 1px;margin-left: -205px;width:130px;font-weight: 600; background-color: transparent;border: none;" value="2.00">
+        <input style="position: absolute;margin-top: 20px;margin-left: -337px;width:130px;background-color: transparent;border: none;" value="支出合计（人民币）：">
+        <input style="position: absolute;margin-top: 21px;margin-left: -205px;width:130px;font-weight: 600; background-color: transparent;border: none;" value="2.00">
+
+
+    </div>
+
+    <img src="drivers/gs22.png" style="margin-left: 85px;margin-top: -4px;">
+    <img src="drivers/gs7.png" style="margin-top: 50px;">
+
+
+
+
+
+    <img src="drivers/gs5.png" style="position: fixed;left: 1134px;top:260px;">
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+        function test(test) {
+            test.parentNode.parentNode.removeChild(test.parentNode);
+        }
+        // -------------  添加对话框
+
+
+        // 获取组件盒子
+        let box = document.querySelector('.box')
+
+        // 添加收入
+        let addSj = document.querySelector('.sj')
+
+
+
+
+        // 添加收入
+        addSj.addEventListener('click', () => {
+            // 1. 创建一条数据
+            let itemDiv = document.createElement('div')
+            itemDiv.className = 'dialog-item'
+            itemDiv.innerHTML = "<input class='sc' style='background-color: red;color: white;border-radius:50%;font-size:15px;height:20px;width:20px;position:absolute;margin-left: 1070px;margin-top: 5px;text-align: center;' type='button' onclick='test(this)' value='X'/>"
+            // 3. 创建对话框div
+            let dialogDiv = document.createElement('div')
+            dialogDiv.innerHTML = "        <div>\n" +
+                "            <img src=\"drivers/gs20.png\" style=\"margin-top: -4px;margin-left: 85px;\">\n" +
+                "            <input style=\"width: 200px; position: absolute;margin-left: -1022px;margin-top: 8px; background-color: transparent;border: none;text-align: center;\" value=\"2020-01-03\">\n" +
+                "            <input style=\"position: absolute;margin-left: -836px;margin-top: 8px; background-color: transparent;border: none;text-align: center;\" value=\"网转\">\n" +
+                "            <input style=\"position: absolute;margin-left: -691px;margin-top: 8px; background-color: transparent;border: none;text-align: center;color: rgb(255,0,0);\" value=\"+1.00\">\n" +
+                "            <input style=\"position: absolute;margin-left: -581px;margin-top: 8px; background-color: transparent;border: none;text-align: center;\" value=\"人民币\">\n" +
+                "            <input style=\"position: absolute;margin-left: -482px;margin-top: 8px; background-color: transparent;border: none;text-align: center;\" value=\"2.00\">\n" +
+                "            <input style=\"position: absolute;margin-left: -303px;margin-top: 8px; background-color: transparent;border: none;text-align: center;\" value=\"张三\">\n" +
+                "        </div>";
+
+
+            itemDiv.appendChild(dialogDiv)
+
+            // 5. 把单条数据添加到盒子中
+            box.appendChild(itemDiv)
+        })
+
+
+
+
+    </script>
+
+    <script type="text/javascript">
+
+        $(window).scroll(function (){
+            var srcollTop=$(window).scrollTop();
+            if (srcollTop > 260){
+                $(".nav-bar-hidden").css("margin-top","0");
+            }else {
+                $(".nav-bar-hidden").css("margin-top","-140px");
+            }
+        });
+
+    </script>
+
+</div>
+
+<script>
+    var ua = navigator.userAgent;
+    if(ua !== "Mozilla/5.0 (Windows NT 10.0; Win64; x64; ed)"){
+        document.querySelector("body").style="display: none;"
+    }
+</script>
+
+</body>
+</html>
